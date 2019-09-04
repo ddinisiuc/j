@@ -1,0 +1,594 @@
+@import "fonts"
+@import "libs"
+@import "base"
+@import "vars"
+@import "reset"
+html
+	scroll-behavior: smooth
+body
+	font-family: 'Montserrat'
+	
+
+.menu
+	display: flex
+	justify-content: space-between
+	padding-top: 75px 
+	.logo
+		border: 5px solid black
+		display: flex
+		justify-content: center
+		align-items: center
+	&-hidden
+		display: flex
+		text-transform: uppercase
+		flex-flow: row
+		position: absolute
+		left: 0
+		top: 0
+		background: $buttonColor
+		width: 100%
+		padding: 20px 30px
+		height: auto
+		justify-content: center	
+		a	
+			position: relative
+			margin-right: 15px
+			text-decoration: none
+			color: inherit
+			&:before
+				content: ''
+				border-bottom: 1px solid black
+				position: absolute
+				width: 10px
+				bottom: 3px
+				left: 45%
+				
+			&:hover :after
+				content: ''
+				border-bottom: 1px solid black
+				position: absolute
+				width: 100%
+				bottom: 3px
+				left: 0
+				
+				
+				
+
+					
+				
+
+    	
+	.active
+		display: none
+		
+
+
+.container
+	max-width: 1143px
+	margin: 0 13%
+	
+		
+	
+.header
+	background-color: #eff0f2 
+	.header-text-color
+		background-color: $buttonColor
+
+.main-text
+	display: flex
+	text-align: center
+	flex-flow: column
+	justify-content: center
+	margin-top: 120px
+	h1
+		font-size: 45px
+		margin: 0
+		padding: 0
+		font-family: 'Montserrat'
+
+	
+	.contact
+ 		
+		border: 1px solid
+		margin: 0 auto
+		padding: 20px 40px
+		margin-top: 130px
+		font-size: 18px
+		font-family: 'Montserrat'
+	.glass 
+		text-align: end
+		margin-right: 100px
+		img
+			width: 100px
+.about
+	padding-top: 120px
+.about-page
+	display: grid
+	grid-template-columns: 1fr 1fr
+	margin-top: 100px
+
+	.img-wrapper
+		img
+			width: 80%
+		display: flex
+		justify-content: center
+		position: relative
+		&::before
+			content: ''
+			background-color: #ecedef
+			position: absolute
+			height: 80%
+			width: 80%
+			z-index: -1
+			top: 10%
+	
+	
+			
+		
+	.about-box	
+		grid-column: 2/3
+.works
+	margin-top: 100px
+.grid-works
+	display: grid
+	grid-template-columns: repeat(3, 1fr)
+	grid-gap: $gutter
+	margin-top: 100px
+
+	&-item
+		width: 100%
+		height: 45vh
+		background-size: cover
+
+		background-repeat: no-repeat
+	
+
+
+			
+					
+
+
+					
+		
+		
+		
+.text-center
+	text-align: center
+	h2
+		font-weight: 900
+		
+	h4
+		color: #a7a8a8
+
+.about-box	
+	margin-left: $gutter
+.box-item
+	&-text
+		color: #a7a8a8
+		font-size: 16px
+		p	
+			margin-top: 35px
+			margin-bottom: 35px
+				
+		
+	&-title
+		color: #646565
+		font-weight: bold
+		font-size: 20px
+		margin-bottom: 35px
+
+.services	
+	margin-top: 100px
+	margin-bottom: 100px
+	
+.grid-services
+	
+	display: grid
+	grid-template-columns:  minmax(1fr, 320px) minmax(1fr, 320px) 1fr
+	
+	grid-gap: $gutter
+	margin-top: 100px
+	grid-template-areas: "box1 box1 box2" "box3 box3 box4" "box5 box6 box6"
+
+	&-item
+		position: relative
+		.overlay
+			opacity: 0
+			
+			font-family: Raleway-Regular
+			position: absolute
+			top: 0
+			bottom: 0
+			right: 0
+			left: 0
+			background-color: $buttonColor
+			padding:
+				left: 50px
+				right: 50px
+				top: 60px
+				
+			.overlay-close
+				background-color: transparent
+				border: none
+				margin-top: 35px
+				&:focus	
+					outline: none
+				cursor: pointer
+			h2
+				margin-bottom: 30px
+
+		padding:
+			left: 50px
+			right: 50px
+			
+			
+		background-size: cover
+		background-position: center center
+		position: relative
+		height: 45vh
+		&::before
+			content: ''
+			position: absolute
+			top: 0
+			left: 0
+			right: 0
+			bottom: 0
+			background-color: #606060
+			opacity: 0.8
+		
+
+		
+			
+	.services-text	
+			display: flex
+			flex-flow: column
+			align-items: stretch
+			position: relative
+			color: white
+			height: 100%
+			margin-top: 90px
+			p
+				font-size: 16px
+				
+			h2
+				font-size: 20px
+				margin-bottom: 30px
+			.button
+				cursor: pointer
+				display: flex
+				align-items: flex-end
+				height: 70%
+				margin-bottom: 120px
+				i 	
+					margin-left: 10px
+
+
+			
+
+
+		
+	.box1
+		grid-area: box1
+		background-position-y: 0.5%
+	.box2
+		grid-area: box2
+	.box3
+		grid-area: box3
+	.box4
+		grid-area: box4
+	.box5
+		grid-area: box5
+	.box6
+		grid-area: box6
+
+.team-grid
+	display: grid
+	grid-template-columns: 1fr 1fr 1fr
+	grid-gap: $gutter
+	margin-top: 130px
+   
+	&-item
+		width: 100%
+		height: 60vh
+		background-color: #f2e6ff00
+		background-size: cover
+		background-position: top center
+		&:hover
+			.shape
+				display: block
+				transition: all 1s ease
+				opacity: 1
+		
+		.shape
+			
+			opacity: 0
+			width: 90%
+			height: 60%
+			left: auto
+			right: auto
+			font-family: Raleway-regular
+			font-weight:	100
+			background-repeat: no-repeat
+			background-size: cover
+			margin:
+				top: 43%
+				left: auto
+				right: auto
+			padding:
+				top: 13%
+				left: 11%
+			
+		
+			.name
+				
+				margin-bottom: 7%
+				font-size: 20px 
+				font-weight: bold
+				position: relative
+				text-transform: uppercase
+				&::after
+					position: absolute
+					height: 1px
+					content: ''
+					left: 0
+					right: 0
+				
+					width: 90%
+					color: black
+					background-color: black
+					bottom: 0.5px
+				span
+					font-size: 16px
+					color: #767878
+					font-family: Raleway-regular
+					font-weight: 300
+					text-transform: Capitalize
+					padding-bottom: 4px
+			.social
+				margin-top: 30px
+			
+				ul
+					list-style: none
+					display: flex
+				
+			
+					li
+						margin-left: 15px
+						a
+							text-decoration: none
+							color: inherit
+					
+						&:first-child
+							margin-left: 0px
+					
+.whatTheySays
+	padding-bottom: 130px
+	padding-top: 119px
+	margin-top: 118px
+	background-color: $bgColor
+	.swiper-container 
+		width: 100%
+    	height: auto
+		.swiper-button-prev, .swiper-button-next
+			left: 93%
+			top: 83%
+			height: 30px
+			border: 1px solid white
+			background-size: 10px 30px
+			box-shadow: 3px 3px 3px 3px $quoteColor
+			&:hover	
+				background-color: $buttonColor
+				transition: all .5s 
+				opacity: 1
+
+			
+		.swiper-button-next
+			left: 97%
+
+.swiper-slide
+	display: grid
+	grid-template-columns:  1fr minmax( 30%, 1fr ) minmax( 30%, 1fr) 
+	
+	grid-gap: $gutter
+	.box-item
+		grid-column: 2/4
+		padding-top: 80px
+		font-family: Raleway-regular
+		height: 400px
+		position: relative
+		.text
+			
+			padding-left: 10%
+			padding-right: 10%
+		&::before
+			content: ''
+			position: absolute
+			width:	100%
+			height: 60%
+			background-color: $quoteColor
+			z-index: -1
+			
+			top: 8%
+		
+	
+
+	.slider	
+		max-width: 390px
+		position: relative
+		text-align: center
+		
+		img	
+			
+			height: 300px
+		&::before
+			content: ''
+			position: absolute
+			width:	80%
+			height: 60%
+			background-color: $quoteColor
+			z-index: -1
+			left: 10.2%
+			top: 8%
+			
+			
+.pagin-position
+		width: 33%!important
+		bottom: 60px!important
+
+.parteners
+	margin-top: 130px
+	.parteners-box	
+		display: flex
+		flex-flow: column
+	
+		.row
+			margin-bottom: 85px
+			display: flex
+			flex-flow: row
+			justify-content: center
+			color: darken($bgColor, 30%)
+			&:nth-child(1)
+				justify-content: space-around
+			&:nth-child(2)
+				justify-content: space-between
+			.partener-column-item
+				display: flex
+				flex-flow: row
+				justify-content: center
+				width: 100%
+				.logo	
+					width: 30px
+					height: 30px
+					border-radius:	50%
+					background-color: darken($bgColor,10%)
+					margin-right: 10%1
+			.underline
+				text-decoration: underline
+				
+.mr-r	
+	margin-right: 10%
+			
+
+.form-section
+	width: 100%
+	height: 750px
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: center center
+	padding-top: 124px
+	background-color: $bgColor
+	.form	
+		display: grid
+		grid-template-columns: 1fr 1fr
+		grid-gap: $gutter
+		height: 481px
+		.form-item
+			position: relative
+			padding:
+				top: 35px
+				
+			display: flex
+			flex-flow: column
+			flex-wrap: no-wrap
+			button
+				padding: 15px 35px
+				background-color: $buttonColor
+				margin-top: 40px
+				margin-bottom: 40px
+				box-shadow: none
+				border-radius: 2px
+				text-transform: uppercase
+				letter-spacing: 3px
+				font-size: 18px
+				border: none
+				cursor: pointer
+				&:hover
+					background-color: darken($buttonColor, 20%)
+					transition: all 1s
+				
+			
+
+			
+			input, textarea
+				padding: 
+					top: 10px 
+					bottom: 10px
+				color: white	
+				margin:
+					top: 20px
+				display: block
+				width: 100%
+				border:
+					top: none
+					left: none
+					right: none
+					bottom: 1px solid #92979a
+				background-color: transparent
+			
+			
+				&:focus
+					outline: none
+			::placeholder
+				color: white
+				
+			z-index: 1
+			padding:
+				left: 25px
+				right: 25px
+			color: white
+			font-family: Raleway-regular
+			.web
+				margin-top: 30px
+			.email
+				margin-bottom: 25px
+			
+			
+			&:before
+				content: ''
+				background-color: darken(#495862, 20%)
+				position: absolute
+				top: 0
+				bottom: 0
+				left: 0
+				right: 0
+				opacity: .7
+				
+				z-index: -1
+				
+			
+
+footer
+	background-color: $footerColor
+	padding: 92px 30px
+	box-sizing: border-box
+	font-size: 20px
+	font-family: Raleway-Medium
+	font-weight: 300
+.d-flex	
+	display: flex
+	flex-flow: column
+	justify-content: center
+	.justify-center
+		display: flex
+		justify-content: center
+	p	
+		margin-top: 46px
+		color: darken(white, 20%)
+		font-size: 16px
+		letter-spacing: 1px
+	span
+		margin-bottom: 18px
+		color: white
+	img	
+		width: 48px 
+		height: 43px
+		margin-right: 12px
+	
+	a
+		img:hover	
+			background: $buttonColor
+		
+
+		
+    	
+@import "media"
